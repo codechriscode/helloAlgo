@@ -4,7 +4,7 @@
 [x] Heap
 [x] Priority Queue
 [x] Heap Building
-[ ] Heap Sort
+[x] Heap Sort
 [ ] Binary Search Trees
 [ ] AVL trees
 [ ] Stack
