@@ -8,6 +8,19 @@ export class Heap extends ArrayBT {
     super(array)
     this.#min = min
     this.#max = !min
+
+    this.#constructHeapFromOriginalTree()
+  }
+
+  // Ends up being ~O(n) since subtrees get
+  // progressively more ordered; leaf node populace
+  // get no attention; and each iteration
+  // runs at most H heapifyT-B recursions
+  #constructHeapFromOriginalTree() {
+    const heapLen = this.tree.length
+    for(let i = heapLen - 1; i >= 0; i--) {
+      this.#heapifyTopBottom(i)
+    }
   }
 
   peek() {
@@ -116,6 +129,11 @@ function runHeaps() {
   console.log(maxHeap.traverseLevelOrder())
   console.log(`Popping ${maxHeap.pop()}`);
   console.log(maxHeap.traverseLevelOrder())
+
+  console.log('\n', "********** MIN HEAP CONSTRUCTION **********", '\n')
+
+  const minConstruction = new Heap(true, [8,7,6,5,4,3,2,1,0])
+  console.log(minConstruction.traverseLevelOrder())
 }
 
 runHeaps()
