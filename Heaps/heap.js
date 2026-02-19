@@ -58,6 +58,7 @@ export class Heap extends ArrayBT {
       let positionToChange = startingPosition;
 
       // #min and #max kept mutually exclusive, safe to use || later
+      // test absolute smaller or biggest between them, considering both left and right
       const leftMinCondition = this.#min && leftValue < this.tree[positionToChange] && leftIndex < this.size()
       const leftMaxCondition = this.#max && leftValue > this.tree[positionToChange] && leftIndex < this.size()
       if(leftMinCondition || leftMaxCondition) positionToChange = leftIndex
@@ -93,7 +94,7 @@ export class Heap extends ArrayBT {
     const minLeftCondition = this.#min && leftValue < this.tree[positionToChange];
     const maxLeftCondition = this.#max && leftValue > this.tree[positionToChange];
     if(minLeftCondition || maxLeftCondition) positionToChange = leftIndex
-
+    // test absolute smaller or biggest between them, considering both left and right
     const minRightCondition = this.#min && rightValue < this.tree[positionToChange];
     const maxRightCondition = this.#max && rightValue > this.tree[positionToChange];
     if(minRightCondition || maxRightCondition) positionToChange = rightIndex
@@ -165,4 +166,4 @@ function runHeaps() {
   console.log(maxConstruction.traverseLevelOrder())
 }
 
-runHeaps()
+// runHeaps()
