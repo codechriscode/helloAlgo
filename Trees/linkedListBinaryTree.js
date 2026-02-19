@@ -1,4 +1,4 @@
-class BT {
+export class BT {
   value;
   left;
   right;
@@ -9,7 +9,7 @@ class BT {
     this.value = value
   }
 
-  bfsLevelOrder() {
+  traverseLevelOrder() {
     const queue = [this]
     const list = []
     while (queue.length) {
@@ -46,14 +46,16 @@ class BT {
   }
 }
 
-console.log("********** LINKED-LIST-BASED BTREE **********", '\n')
+function runLlBTs() {
+  console.log("********** LINKED-LIST-BASED BTREE **********", '\n')
 
-const rootBt = new BT(0, new BT(1, new BT(3), new BT(4)), new BT(2, new BT(5), new BT(6)))
-console.log("Breadth-first search")
-console.log(rootBt.bfsLevelOrder())
-console.log("Depth-first search, PreOrder")
-console.log(rootBt.traversePreOrder())
-console.log("Depth-first search, InOrder")
-console.log(rootBt.traverseInOrder())
-console.log("Depth-first search, PostOrder")
-console.log(rootBt.traversePostOrder())
+  const rootBt = new BT(0, new BT(1, new BT(3), new BT(4)), new BT(2, new BT(5), new BT(6)))
+  console.log("Breadth-first search")
+  console.log(rootBt.traverseLevelOrder())
+  console.log("Depth-first search, PreOrder")
+  console.log(rootBt.traversePreOrder())
+  console.log("Depth-first search, InOrder")
+  console.log(rootBt.traverseInOrder())
+  console.log("Depth-first search, PostOrder")
+  console.log(rootBt.traversePostOrder())
+}
