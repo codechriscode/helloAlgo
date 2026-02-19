@@ -1,0 +1,21 @@
+[x] Binary Tree as LinkedList
+[x] Binary Tree as Array
+[x] Binary Tree Traversals (BF and DFs)
+[x] Heap
+[x] Priority Queue
+[ ] Heap Building
+[ ] Heap Sort
+[ ] Binary Search Trees
+[ ] AVL trees
+[ ] Stack
+[ ] Queue
+[ ] Double-ended Queue
+[ ] Graphs
+[ ] Backtracking
+[ ] Dynamic Programming
+[ ] Sorting
+[ ] Searching
+---
+
+Observe the quality of the problem to choose a more suitable approach from the beginning.
+For example, a problem with many items in the first steps can be required to be searchable or orderable in the later steps.
