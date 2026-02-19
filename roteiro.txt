@@ -3,7 +3,7 @@
 [x] Binary Tree Traversals (BF and DFs)
 [x] Heap
 [x] Priority Queue
-[ ] Heap Building
+[x] Heap Building
 [ ] Heap Sort
 [ ] Binary Search Trees
 [ ] AVL trees
